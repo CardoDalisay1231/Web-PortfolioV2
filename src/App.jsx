@@ -6,13 +6,14 @@ import AboutSection from './components/AboutSection';
 import ProjectSection from './components/ProjectSection';
 import ContactSection from './components/ContactSection';
 import FooterSection from './components/FooterSection';
+import Chatbot from './components/ChatBot';
 
 
 function App() {
 
   return (
     <>
-    
+      <Chatbot/>
       <NavSection/>
       <HeroSection/>
       <AboutSection/>

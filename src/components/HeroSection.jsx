@@ -26,6 +26,7 @@ export default function HeroSection() {
             Digital Artist
           </p>
           <div className="gap-2 d-md-block justify-content-center social">
+            
             <div>
               <a href="https://github.com/CardoDalisay1231">
                 {" "}

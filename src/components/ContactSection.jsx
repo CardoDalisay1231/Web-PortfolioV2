@@ -8,17 +8,27 @@ export default function ContactSection() {
   const handleSubmit = async (event) => {
     event.preventDefault();
 
+    if (!email || !message) {
+      alert("Please fill in all fields.");
+      return;
+    }
+
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailPattern.test(email)) {
+      alert("Please enter a valid email address.");
+      return;
+    }
+
     try {
       const result = await emailjs.send(
         "service_6jf5832",
         "template_gr4z7xq",
         {
-          to_email: "jmbagares52@gmail.com", // Your email address
-          from_email: email, // Sender's email address
+          to_email: "jmbagares52@gmail.com",
+          from_email: email,
           message: message,
-          // Add other necessary fields for your template if needed
         },
-        "gfKijo-w5iDs7N2VT" // Replace with your actual public key
+        "YOUR_PUBLIC_KEY" // Replace with your actual public key
       );
 
       if (result.status === 200) {
@@ -37,12 +47,12 @@ export default function ContactSection() {
 
   return (
     <div id="contact" className="container px-4 py-5 full-screen-height">
-      <h6 className="text-center top">Let's Connect</h6>
-      <h2 className="tittle display-2">CONTACT ME</h2>
+      <h6 className="text-center text-uppercase top">Let's Connect</h6>
+      <h2 className="tittle display-2 text-center">CONTACT ME</h2>
       <br />
       <div className="row justify-content-center">
         <div className="col-md-6 col-lg-6 contact">
-          <form onSubmit={handleSubmit}>
+          <form onSubmit={handleSubmit} className="contact-form">
             <div className="mb-3">
               <label htmlFor="exampleFormControlInput1" className="form-label">
                 Email address
