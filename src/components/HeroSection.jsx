@@ -1,5 +1,3 @@
-import Lottie from "lottie-react";
-import animation from "../Animation.json";
 
 import React from "react";
 
@@ -10,7 +8,7 @@ export default function HeroSection() {
       <div className="full-screen-height row flex-lg-row-reverse justify-content-center align-items-center text-center g-5 py-3 fade-in-down">
         <div className="col-10 col-sm-8 col-lg-4">
           <img
-            src="./images/_MG_5125.JPG"
+            src="./images/profile.JPG"
             className="rounded-circle d-block mx-lg-auto img-fluid profile"
             alt="profile"
             width={400}
