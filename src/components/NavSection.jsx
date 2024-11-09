@@ -1,7 +1,7 @@
 export default function NavSection() {
   return (
 
-    <nav className="navbar text-center navbar-expand-lg bg-body-tertiary sticky-top">
+    <nav className="navbar text-center navbar-expand-lg sticky-top">
       <div className="container-fluid ">
         <button
           className="navbar-toggler"

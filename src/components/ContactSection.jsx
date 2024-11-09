@@ -46,7 +46,7 @@ export default function ContactSection() {
   };
 
   return (
-    <div id="contact" className="container px-4 py-5 full-screen-height">
+    <div id="contact" className="container px-4 py-5">
       <h6 className="text-center text-uppercase top">Let's Connect</h6>
       <h2 className="tittle display-2 text-center">CONTACT ME</h2>
       <br />
@@ -55,7 +55,7 @@ export default function ContactSection() {
           <form onSubmit={handleSubmit} className="contact-form">
             <div className="mb-3">
               <label htmlFor="exampleFormControlInput1" className="form-label">
-                Email address
+                Email Address
               </label>
               <input
                 type="email"
@@ -79,7 +79,7 @@ export default function ContactSection() {
                 onChange={(e) => setMessage(e.target.value)}
               />
             </div>
-            <button type="submit" className="btn btn-lg">
+            <button type="submit" className="btn btn-outline-success fw-bold btnss">
               SEND
             </button>
           </form>

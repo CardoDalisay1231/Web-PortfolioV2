@@ -10,6 +10,16 @@ body {
   background-size: 35%; 
   font-family: "Roboto Slab", serif;
 }
+body, html, #root {
+  width: 100%;
+  max-width: 100%; /* Ensures no limitation on body width */
+  margin: 0;
+  padding: 0;
+}
+
+.container{
+  width: 100%;
+}
 a i.bi-github { 
   color: rgb(0, 0, 0);  /* Or use #000 for black */
   padding: 5px;
@@ -37,6 +47,11 @@ a .bi-github:hover {
 }
 .navbar{
   opacity: 0.9;
+  background-color: #979797;
+  height: 80px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  font-size: 20px;
 }
 .name{
   font-family: "Roboto Slab", serif;
@@ -115,16 +130,6 @@ main {
 .left {
   margin-top: 50px;
 }
-
-
-.btn{
-  background-color: rgb(197, 164, 120) !important;
-  color: #000000  !important;
-}
-.btn:hover {
-  background-color:  rgb(119, 69, 9) !important;
-  color: aliceblue !important;
-}
 .skills,.educ,.myself,.head-tittle,.name,.lead,.social,.top{
  background-color: rgba(255, 255, 255, 0.685);
  border-radius: 20px;
@@ -139,7 +144,6 @@ main {
 }
 
 .chatbot-button {
-  background-color: #00000093; /* Customize color */
   color: white;
   padding: 10px;
   border-radius: 30%;
@@ -153,7 +157,12 @@ main {
 .chatbot-button i {
   font-size: 3rem; /* Adjust icon size */
 }
-
+.cv{
+  color: #2c2c2c;
+}
+.cv:hover{
+  color: #4a85b6;
+}
 .chatbot-frame {
   position: fixed;
   bottom: 80px; /* Adjust to sit above the button */
@@ -165,6 +174,25 @@ main {
   overflow: hidden;
   z-index: 1000;
 }
+.chatbot-popup {
+  position: absolute;
+  bottom: 60px;
+  right: 10px;
+  background-color: #333;
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  white-space: nowrap;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+.btnss{
+  background-color: #fff !important;
+}
+.btnss:hover{
+  background-color: #157347!important;
+}
 
 /* Responsive adjustments for smaller screens */
 @media (max-width: 400px) {
@@ -175,4 +203,12 @@ main {
   .chatbot-button i {
     font-size: 2rem; /* Adjust icon size for smaller screens */
   }
+  .navbar{
+    height: 65px;
+  }
+}
+
+
+.foot{
+  background-color: #fdfdfdb7;
 }

@@ -1,7 +1,7 @@
 export default function AboutSection() {
   return (
     <>
-   <div id="about" className="container px-4 py-5 full-screen-height ">
+   <div id="about" className="container px-4 py-5">
    <h6  className="text-center top">Learn More About Me</h6>
    <h2 className="tittle display-2">ABOUT</h2>
   <div className="row row-cols-1 row-cols-md-2 align-items-md-center justify-content-center align-items-center g-5 py-5">

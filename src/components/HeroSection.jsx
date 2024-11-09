@@ -40,6 +40,12 @@ export default function HeroSection() {
                 />
               </a>
             </div>
+            <h1 className="lead fw-bolder">
+  <a href="/Web-PortfolioV2/JAN-MANUEL-BAGARES_CV.pdf" download="JAN-MANUEL-BAGARES_CV.pdf" className="text-decoration-none cv">
+    Download my CV
+  </a>
+</h1>
+
           </div>
         </div>
       </div>
