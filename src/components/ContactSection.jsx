@@ -28,7 +28,7 @@ export default function ContactSection() {
           from_email: email,
           message: message,
         },
-        "YOUR_PUBLIC_KEY" // Replace with your actual public key
+        "N7yHZyDb8MQ05Nb5l" // Replace with your actual public key
       );
 
       if (result.status === 200) {
