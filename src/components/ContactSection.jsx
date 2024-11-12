@@ -53,7 +53,7 @@ export default function ContactSection() {
       <div className="row justify-content-center">
         <div className="col-md-6 col-lg-6 contact">
           <form onSubmit={handleSubmit} className="contact-form">
-            <div className="mb-3">
+            <div className="mb-3 fw-bold email">
               <label htmlFor="exampleFormControlInput1" className="form-label">
                 Email Address
               </label>
@@ -66,7 +66,7 @@ export default function ContactSection() {
                 onChange={(e) => setEmail(e.target.value)}
               />
             </div>
-            <div className="mb-3">
+            <div className="mb-3 fw-bold message">
               <label htmlFor="exampleFormControlTextarea1" className="form-label">
                 Message Me
               </label>

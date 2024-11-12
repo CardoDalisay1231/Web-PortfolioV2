@@ -1,8 +1,36 @@
-export default function NavSection() {
-  return (
+import { motion, useAnimation } from "framer-motion";
+import { useEffect } from "react";
+import { useInView } from "react-intersection-observer";
 
-    <nav className="navbar text-center navbar-expand-lg sticky-top">
-      <div className="container-fluid ">
+export default function NavSection() {
+  const controls = useAnimation();
+  const { ref, inView } = useInView({
+    threshold: 0.1, // Adjust as needed
+  });
+
+  useEffect(() => {
+    if (inView) {
+      controls.start("visible");
+    } else {
+      controls.start("hidden");
+    }
+  }, [controls, inView]);
+
+  const navVariants = {
+    hidden: { opacity: 0, y: -50 },
+    visible: { opacity: 1, y: 0 },
+  };
+
+  return (
+    <motion.nav
+      ref={ref}
+      className="navbar text-center navbar-expand-lg sticky-top"
+      initial="hidden"
+      animate={controls}
+      variants={navVariants}
+      transition={{ duration: 0.8 }}
+    >
+      <div className="container-fluid">
         <button
           className="navbar-toggler"
           type="button"
@@ -15,10 +43,10 @@ export default function NavSection() {
           <span className="navbar-toggler-icon" />
         </button>
         <div
-          className=" collapse justify-content-center fw-bold navbar-collapse"
+          className="collapse justify-content-center fw-bold navbar-collapse"
           id="navbarSupportedContent"
         >
-          <ul className=" navbar-nav mb-2 mb-lg-0">
+          <ul className="navbar-nav mb-2 mb-lg-0">
             <li className="nav-item">
               <a className="nav-link" aria-current="page" href="#home">
                 HOME
@@ -42,6 +70,6 @@ export default function NavSection() {
           </ul>
         </div>
       </div>
-    </nav>
+    </motion.nav>
   );
 }
