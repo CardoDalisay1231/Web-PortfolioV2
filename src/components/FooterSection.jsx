@@ -4,7 +4,7 @@ export default function FooterSection(){
     return(
       <div class="container">
         <footer class="py-3 my-4 fw-bold foot">
-          <p class="text-center text-body-secondary border-bottom border-2">© {currentYear} Company, Inc</p>
+          <p class="text-center text-body-secondary border-bottom border-2">© {currentYear} JmBagares Portfolio</p>
         </footer>
       </div>
     )
