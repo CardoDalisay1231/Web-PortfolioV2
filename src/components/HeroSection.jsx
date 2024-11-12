@@ -1,5 +1,6 @@
 
 import React from "react";
+import Draggable from "react-draggable";
 
 export default function HeroSection() {
   return (
@@ -7,14 +8,23 @@ export default function HeroSection() {
 
       <div className="full-screen-height row flex-lg-row-reverse justify-content-center align-items-center text-center g-5 py-3 fade-in-down">
         <div className="col-10 col-sm-8 col-lg-4">
+          <Draggable>
           <img
             src="./images/profile.JPG"
             className="rounded-circle d-block mx-lg-auto img-fluid profile"
+             draggable="false"
+             style={{
+              cursor: 'grab', // Adds a 'grab' cursor on hover
+              
+            }}
+            onMouseDown={(e) => (e.currentTarget.style.cursor = 'grabbing')} // 'grabbing' cursor when dragging
+            onMouseUp={(e) => (e.currentTarget.style.cursor = 'grab')} // Returns to 'grab' cursor after release
             alt="profile"
             width={400}
             height={500}
             loading="lazy"
           />
+          </Draggable>
         </div>
         <div className="col-lg-4">
           <h2 className="head-tittle ">Hello i'm Je-em</h2>

@@ -9,12 +9,13 @@ import FooterSection from './components/FooterSection';
 import Chatbot from './components/ChatBot';
 
 
+
 function App() {
 
   return (
     <>
       <Chatbot/>
-      <NavSection/>
+      <NavSection/> 
       <HeroSection/>
       <AboutSection/>
       <ProjectSection/>
