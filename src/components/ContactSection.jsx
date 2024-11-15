@@ -4,18 +4,20 @@ import emailjs from "emailjs-com";
 export default function ContactSection() {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+  const [alert, setAlert] = useState(null); // For Bootstrap alerts
 
   const handleSubmit = async (event) => {
     event.preventDefault();
 
+    // Validation
     if (!email || !message) {
-      alert("Please fill in all fields.");
+      setAlert({ type: "warning", text: "Please fill in all fields." });
       return;
     }
 
     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailPattern.test(email)) {
-      alert("Please enter a valid email address.");
+      setAlert({ type: "warning", text: "Please enter a valid email address." });
       return;
     }
 
@@ -34,14 +36,14 @@ export default function ContactSection() {
       if (result.status === 200) {
         setEmail("");
         setMessage("");
-        alert("Message sent!");
+        setAlert({ type: "success", text: "Message sent!" });
       } else {
         console.error("Error sending email:", result);
-        alert("Error sending message. Please try again later.");
+        setAlert({ type: "danger", text: "Error sending message. Please try again later." });
       }
     } catch (error) {
       console.error("Error sending email:", error);
-      alert("Error sending message. Please try again later.");
+      setAlert({ type: "danger", text: "Error sending message. Please try again later." });
     }
   };
 
@@ -50,6 +52,21 @@ export default function ContactSection() {
       <h6 className="text-center text-uppercase top">Let's Connect</h6>
       <h2 className="tittle display-2 text-center">CONTACT ME</h2>
       <br />
+
+      {/* Bootstrap Alert */}
+      {alert && (
+        <div className={`alert alert-${alert.type} alert-dismissible fade show`} role="alert">
+          {alert.text}
+          <button
+            type="button"
+            className="btn-close"
+            data-bs-dismiss="alert"
+            aria-label="Close"
+            onClick={() => setAlert(null)}
+          ></button>
+        </div>
+      )}
+
       <div className="row justify-content-center">
         <div className="col-md-6 col-lg-6 contact">
           <form onSubmit={handleSubmit} className="contact-form">

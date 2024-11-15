@@ -1,6 +1,5 @@
 
 import React from "react";
-import Draggable from "react-draggable";
 import { motion, useAnimation } from "framer-motion";
 import { useEffect } from "react";
 import { useInView } from "react-intersection-observer";
@@ -41,7 +40,6 @@ export default function HeroSection() {
           variants={profileVariants}
           transition={{ duration: 1 }}
         >
-          <Draggable>
             <img
               src="./images/profile.JPG"
               className="rounded-circle d-block mx-lg-auto img-fluid profile"
@@ -56,7 +54,6 @@ export default function HeroSection() {
               height={500}
               loading="lazy"
             />
-          </Draggable>
         </motion.div>
         <motion.div
           className="col-lg-4"

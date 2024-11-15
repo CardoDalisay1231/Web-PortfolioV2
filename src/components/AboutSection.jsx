@@ -73,7 +73,7 @@ export default function AboutSection() {
                 </div>
                 <div className="col d-flex flex-column gap-2">
                   <div className="feature-icon-small d-inline-flex align-items-center justify-content-start fs-4 ">
-                    <i class="bi bi-backpack2" />
+                    <i className="bi bi-backpack2" />
                   </div>
                   <h4 className="fw-semibold mb-0 text-body-emphasis educ">
                     Education

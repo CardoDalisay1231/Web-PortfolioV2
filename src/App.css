@@ -11,7 +11,6 @@ body {
   background-image: url(../public/images/logos.png);
   background-size: 35%; 
   font-family: "Roboto Slab", serif;
-  cursor: url(../public/images/kamaykamay.png), auto;
   
 }
 body, html, #root {
