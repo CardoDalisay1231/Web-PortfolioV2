@@ -9,7 +9,7 @@ body {
   margin: 0;
   padding: 0;
   background-image: url(../public/images/logos.png);
-  background-size: 35%; 
+  background-size: 70%; 
   font-family: "Roboto Slab", serif;
   
 }
@@ -141,58 +141,13 @@ main {
  border-radius: 20px;
 }
 
-/* Chatbot container and button styles */
-.chatbot-container {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  z-index: 1000;
-}
-
-.chatbot-button {
-  color: white;
-  padding: 10px;
-  border-radius: 30%;
-  border: none;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.chatbot-button i {
-  font-size: 3rem; /* Adjust icon size */
-}
 .cv{
   color: #2c2c2c;
 }
 .cv:hover{
   color: #4a85b6;
 }
-.chatbot-frame {
-  position: fixed;
-  bottom: 80px; /* Adjust to sit above the button */
-  right: 15px;
-  width: 350px;
-  height: 500px;
-  border-radius: 10px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-  overflow: hidden;
-  z-index: 1000;
-}
-.chatbot-popup {
-  position: absolute;
-  bottom: 60px;
-  right: 10px;
-  background-color: #333;
-  color: #fff;
-  padding: 8px 12px;
-  border-radius: 8px;
-  font-size: 0.9rem;
-  white-space: nowrap;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-  z-index: 1000;
-}
+
 .btnss{
   background-color: #fff !important;
 }

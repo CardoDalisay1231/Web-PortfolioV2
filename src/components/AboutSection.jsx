@@ -50,52 +50,57 @@ export default function AboutSection() {
               height={400}
             />
           </motion.div>
+
           <motion.div
-            className="col d-flex flex-column align-items-start gap-2"
+            className="col d-flex flex-column align-items-start gap-3"
             initial={{ opacity: 0, y: 50 }}
             animate={controls}
             transition={{ duration: 0.9, delay: 0.6 }}
           >
-            <div className="col">
-              <div className="row row-cols-1 row-cols-sm-2 g-4">
-                <div className="col d-flex flex-column gap-2">
-                  <div className="feature-icon-small d-inline-flex align-items-center justify-content-start fs-4 ">
-                    <i className="bi bi-suitcase-lg" />
+            <div
+              className="card shadow p-4 about-card"
+              style={{
+                backgroundColor: "#fff",
+                borderRadius: "20px",
+                boxShadow: "0px 8px 20px rgba(0, 0, 0, 0.15)",
+                transition: "transform 0.3s ease-in-out",
+              }}
+            >
+              <div className="row">
+                <div className="col-md-6 d-flex flex-column gap-3">
+                  <div className="d-flex align-items-center">
+                    <i className="bi bi-suitcase-lg fs-4 me-2" />
+                    <h4 className="fw-semibold mb-0 text-body-emphasis">Skills</h4>
                   </div>
-                  <h4 className="fw-semibold mb-0 text-body-emphasis skills ">
-                    Skills
-                  </h4>
-                  <p className="skills fw-bold">
+                  <p className="fw-bold mb-0">
                     React, JavaScript <br />
                     HTML/CSS, Bootstrap <br />
-                    Photoshop, Illustrator <br />
+                    Photoshop, Illustrator
                   </p>
                 </div>
-                <div className="col d-flex flex-column gap-2">
-                  <div className="feature-icon-small d-inline-flex align-items-center justify-content-start fs-4 ">
-                    <i className="bi bi-backpack2" />
+                <div className="col-md-6 d-flex flex-column gap-3">
+                  <div className="d-flex align-items-center">
+                    <i className="bi bi-backpack2 fs-4 me-2" />
+                    <h4 className="fw-semibold mb-0 text-body-emphasis">Education</h4>
                   </div>
-                  <h4 className="fw-semibold mb-0 text-body-emphasis educ">
-                    Education
-                  </h4>
-                  <p className=" educ fw-bold">
-                    CVSU Bacoor- Bachelor of Science in Computer Science
-                    <br />
-                    Grade 11 & 12 UPHSD Laspiñas - Information and Communication
-                    Technology
+                  <p className="fw-bold mb-0">
+                    CVSU Bacoor - BSc Computer Science <br />
+                    UPHSD Las Piñas - ICT (Senior High)
                   </p>
                 </div>
               </div>
+
+              <hr className="my-4" />
+
+              <p className="myself fw-bold mb-0 text-center">
+                I'm Jan Manuel Bagares from T.S Cruz, Las Piñas City. I'm a 3rd
+                year Computer Science student at CVSU Bacoor. I'm a self-taught
+                developer and designer, passionate about creating innovative
+                solutions. Although I'm still a newbie, I'm eager to learn more
+                and improve my skills. I'm a team player and a quick learner.
+                I'm excited to collaborate and create something amazing.
+              </p>
             </div>
-            <p className="myself fw-bold">
-              I'm Jan Manuel Bagares from T.S Cruz, LasPiñas City. I'm a 3rd
-              year student at CVSU Bacoor i'm a computer science student. I'm a
-              self-taught developer and a designer. I'm passionate about
-              creating something new and innovative. Although I'm still a
-              newbie, I'm eager to learn more and improve my skills. I'm a team
-              player and a quick learner. I'm excited to collaborate with you
-              and create something amazing.
-            </p>
           </motion.div>
         </div>
       </div>

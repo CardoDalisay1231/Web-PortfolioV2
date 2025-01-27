@@ -68,7 +68,17 @@ export default function ContactSection() {
       )}
 
       <div className="row justify-content-center">
-        <div className="col-md-6 col-lg-6 contact">
+        <div
+          className="col-md-6 col-lg-6 contact card shadow p-4"
+          style={{
+            backgroundColor: "#fff",
+            borderRadius: "20px",
+            boxShadow: "0px 4px 12px rgba(0, 0, 0, 0.1)",
+            marginTop: "-10px",
+            zIndex: 1,
+
+          }}
+        >
           <form onSubmit={handleSubmit} className="contact-form">
             <div className="mb-3 fw-bold email">
               <label htmlFor="exampleFormControlInput1" className="form-label">

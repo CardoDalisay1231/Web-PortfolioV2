@@ -1,5 +1,5 @@
-
 import React from "react";
+import Draggable from "react-draggable";
 import { motion, useAnimation } from "framer-motion";
 import { useEffect } from "react";
 import { useInView } from "react-intersection-observer";
@@ -31,15 +31,15 @@ export default function HeroSection() {
 
   return (
     <div ref={ref} id="home" className="container full-screen-height">
-
       <div className="full-screen-height row flex-lg-row-reverse justify-content-center align-items-center text-center g-5 py-3 fade-in-down">
-      <motion.div
+        <motion.div
           className="col-10 col-sm-8 col-lg-4"
           initial="hidden"
           animate={controls}
           variants={profileVariants}
           transition={{ duration: 1 }}
         >
+          <Draggable>
             <img
               src="./images/profile.JPG"
               className="rounded-circle d-block mx-lg-auto img-fluid profile"
@@ -54,6 +54,7 @@ export default function HeroSection() {
               height={500}
               loading="lazy"
             />
+          </Draggable>
         </motion.div>
         <motion.div
           className="col-lg-4"
